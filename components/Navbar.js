@@ -2,25 +2,19 @@ import Link from 'next/link';
 
 export default function Navbar() {
   return (
-    <nav style={{
-      backgroundColor: 'green',
-      color: 'white',
-      padding: '1rem',
-      position: 'sticky',
-      top: 0,
-      display: 'flex',
-      justifyContent: 'space-between',
-      alignItems: 'center'
-    }}>
-      <Link href="/" style={{ color: 'white', textDecoration: 'none', fontSize: '1.2rem' }}>
-        我的網站
-      </Link>
-      <div style={{ display: 'flex', gap: '1.5rem' }}>
-        <Link href="/" style={{ color: 'white', textDecoration: 'none' }}>首頁</Link>
-        <Link href="/about" style={{ color: 'white', textDecoration: 'none' }}>關於本站</Link>
-        <Link href="/contact" style={{ color: 'white', textDecoration: 'none' }}>聯絡資訊</Link>
-        <Link href="/todos" style={{ color: 'white', textDecoration: 'none' }}>待辦事項</Link>
-        <Link href="/chat-room" style={{ color: 'white', textDecoration: 'none' }}>聊天室</Link>
+    <nav className="bg-blue-100 p-4 shadow-md">
+      <div className="container mx-auto flex justify-between items-center">
+        <div className="flex items-center space-x-4">
+          <Link href="/" className="text-gray-700 hover:text-gray-900 font-medium">
+            首頁
+          </Link>
+        </div>
+        <div className="flex items-center space-x-6">
+          <Link href="/about" className="text-gray-700 hover:text-gray-900">關於本站</Link>
+          <Link href="/contact" className="text-gray-700 hover:text-gray-900">聯絡資訊</Link>
+          <Link href="/todos" className="text-gray-700 hover:text-gray-900">待辦事項</Link>
+          <Link href="/chat-room" className="text-gray-700 hover:text-gray-900">聊天室</Link>
+        </div>
       </div>
     </nav>
   );
